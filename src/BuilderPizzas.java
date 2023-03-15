@@ -1,3 +1,6 @@
+/**
+ * Ensamblador de pizzas.
+ */
 public class BuilderPizzas {
     /**
      * Objeto para construir el builder.
@@ -6,6 +9,7 @@ public class BuilderPizzas {
 
     /**
      * Método que devuelve el objeto terminado.
+     *
      * @return el objeto terminado.
      */
     public Pizzas build() {
@@ -23,6 +27,7 @@ public class BuilderPizzas {
 
     /**
      * Método para personalizar la masa de la pizza.
+     *
      * @param tipoMasa indicar el tipo de masa.
      * @return el tipo de masa.
      */
@@ -33,6 +38,7 @@ public class BuilderPizzas {
 
     /**
      * Método para personalizar el tamaño de la pizza.
+     *
      * @param size indicar el tamaño de la pizza.
      * @return el tamaño de la pizza.
      */
@@ -43,6 +49,7 @@ public class BuilderPizzas {
 
     /**
      * Método para personalizar el relleno de la pizza.
+     *
      * @param relleno indicar si está rellena(true) o no(false).
      * @return si está rellena(true) o no(false).
      */
@@ -53,6 +60,7 @@ public class BuilderPizzas {
 
     /**
      * Método para personalizar el ingrediente cebolla de la pizza.
+     *
      * @param cebolla indicar si lleva(true) o no(false) cebolla.
      * @return si lleva cebolla(true) o no(false).
      */
@@ -63,16 +71,18 @@ public class BuilderPizzas {
 
     /**
      * Método para personalizar el gluten de la pizza.
+     *
      * @param sinGluten indicar si tiene(true) o no(false) gluten.
      * @return si tiene gluten(true) o no(false).
      */
-    public BuilderPizzas setSinGluten(boolean sinGluten){
+    public BuilderPizzas setSinGluten(boolean sinGluten) {
         _pizza.setSinGluten(sinGluten);
         return this;
     }
 
     /**
      * Método para personalizar la recogida de la pizza.
+     *
      * @param recogida indicar tipo de recogida.
      * @return tipo de recogida.
      */

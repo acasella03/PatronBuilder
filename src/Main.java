@@ -3,35 +3,23 @@ public class Main {
         Pizzas pizzaAmedida;
 
         //sintaxis NO reducida
-        BuilderPizzas miBuilder=new BuilderPizzas();
-        miBuilder.setRecogida(TipoRecogida.TIENDA);
+        BuilderPizzas miBuilder = new BuilderPizzas();
+        miBuilder.setRecogida(TipoRecogida.PARA_LLEVAR);
         miBuilder.setSinGluten(true);
-        pizzaAmedida=miBuilder.build();
+        miBuilder.setCebolla(false);
+        miBuilder.setRelleno(false);
+        miBuilder.setSize(Size.MEDIUM);
+        miBuilder.setTipoMasa(TipoMasa.PAN);
+        pizzaAmedida = miBuilder.build();
         System.out.println(pizzaAmedida.toString());
 
         //sintaxis reducida pero poco legible
-        Pizzas pizzaDefault = new BuilderPizzas().setCebolla(false).setSize(Size.BIG).build();
+        Pizzas pizzaDefault = new BuilderPizzas().setSize(Size.BIG).setRelleno(true).build();
         System.out.println(pizzaDefault.toString());
 
         //sintaxis reducida legible
-        Pizzas pizzaDefault2=new BuilderPizzas().setCebolla(true).setSize(Size.BIG).build();
+        Pizzas pizzaDefault2 = new BuilderPizzas().setCebolla(true).setSize(Size.BIG).setRecogida(TipoRecogida.PARA_LLEVAR).build();
         System.out.println(pizzaDefault2.toString());
 
-        /*
-        // utilizamos el builder y en concreto el metodo build
-        // para tener nuestra pizza
-        Pizzas creadaConBuilder = new BuilderPizzas().build();
-        Pizzas sintaxisEncadenada = new BuilderPizzas()
-                .setCebolla(true)
-                .setSize(Pizzas.BIG)
-                .build();
-
-        // aunque el toSpring no está definida, nos valen estas lineas para poner
-        // un punto de ruptura y hacer debug
-        // asi podemos ver los objetos creados
-        System.out.println(creadaConBuilder.toString());
-        System.out.println(sintaxisEncadenada.toString());
-
-         */
     }
 }
