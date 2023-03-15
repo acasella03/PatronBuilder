@@ -4,17 +4,17 @@ public class Main {
 
         //sintaxis NO reducida
         BuilderPizzas miBuilder=new BuilderPizzas();
-        miBuilder.setRecogida(Pizzas.TIENDA);
+        miBuilder.setRecogida(TipoRecogida.TIENDA);
         miBuilder.setSinGluten(true);
         pizzaAmedida=miBuilder.build();
         System.out.println(pizzaAmedida.toString());
 
         //sintaxis reducida pero poco legible
-        Pizzas pizzaDefault = new BuilderPizzas().setCebolla(false).setSize(Pizzas.BIG).build();
+        Pizzas pizzaDefault = new BuilderPizzas().setCebolla(false).setSize(Size.BIG).build();
         System.out.println(pizzaDefault.toString());
 
         //sintaxis reducida legible
-        Pizzas pizzaDefault2=new BuilderPizzas().setCebolla(true).setSize(Pizzas.FINA).build();
+        Pizzas pizzaDefault2=new BuilderPizzas().setCebolla(true).setSize(Size.BIG).build();
         System.out.println(pizzaDefault2.toString());
 
         /*

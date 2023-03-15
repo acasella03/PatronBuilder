@@ -1,32 +1,19 @@
 public class Pizzas {
 
-    private int tipoMasa;
-    private int size;
+    private TipoMasa tipoMasa;
+    private Size size;
     private boolean rellena;
     private boolean cebolla;
     private boolean sinGluten;
-    private int recogida;
-
-    // tipo de masa
-    public static final int FINA = 0;
-    public static final int PAN = 1;
-
-    // tamaño de la pizza
-    public static final int SMALL = 0;
-    public static final int MEDIUM = 2;
-    public static final int BIG = 3;
-
-    // recogida
-    public static final int TIENDA = 0;
-    public static final int PARALLEVAR = 1;
+    private TipoRecogida recogida;
 
     public Pizzas(){
         this.cebolla = true;
-        this.recogida = TIENDA;
+        this.recogida = TipoRecogida.TIENDA;
         this.rellena = false;
         this.sinGluten = false;
-        this.size = MEDIUM;
-        this.tipoMasa = FINA;
+        this.size = Size.MEDIUM;
+        this.tipoMasa = TipoMasa.FINA;
     }
 
     /**
@@ -38,7 +25,7 @@ public class Pizzas {
      * @param sinGluten para celíacos
      * @param recogida como lo va a recoger el cliente
      */
-    public Pizzas(int tipoMasa, int size, boolean rellena, boolean cebolla, boolean sinGluten, int recogida) {
+    public Pizzas(TipoMasa tipoMasa, Size size, boolean rellena, boolean cebolla, boolean sinGluten, TipoRecogida recogida) {
         this.tipoMasa = tipoMasa;
         this.size = size;
         this.rellena = rellena;
@@ -47,19 +34,19 @@ public class Pizzas {
         this.recogida = recogida;
     }
 
-    public int getTipoMasa() {
+    public TipoMasa getTipoMasa() {
         return tipoMasa;
     }
 
-    public void setTipoMasa(int tipoMasa) {
+    public void setTipoMasa(TipoMasa tipoMasa) {
         this.tipoMasa = tipoMasa;
     }
 
-    public int getSize() {
+    public Size getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Size size) {
         this.size = size;
     }
 
@@ -87,22 +74,22 @@ public class Pizzas {
         this.sinGluten = sinGluten;
     }
 
-    public int getRecojida() {
+    public TipoRecogida getRecogida() {
         return recogida;
     }
 
-    public void setRecojida(int recojida) {
+    public void setRecogida(TipoRecogida recogida) {
         this.recogida = recogida;
     }
 
     @Override
     public String toString() {
         return "Pizzas: " +
-                "tipoMasa=" + tipoMasa +
-                ", size=" + size +
-                ", rellena=" + rellena +
-                ", cebolla=" + cebolla +
-                ", sinGluten=" + sinGluten +
-                ", recogida=" + recogida ;
+                "tipo de masa= " + tipoMasa +
+                ", tamaño= " + size +
+                ", rellena= " + rellena +
+                ", cebolla= " + cebolla +
+                ", sinGluten= " + sinGluten +
+                ", recogida= " + recogida ;
     }
 }
