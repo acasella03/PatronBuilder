@@ -59,6 +59,28 @@ public class BuilderPizzas {
     }
 
     /**
+     * Método para personalizar la salsa de la pizza.
+     *
+     * @param salsa indicar si tiene salsa(true) o no(false).
+     * @return si tiene salsa(true) o no(false).
+     */
+    public BuilderPizzas setSalsa(boolean salsa) {
+        _pizza.setSalsa(salsa);
+        return this;
+    }
+
+    /**
+     * Método para personalizar el tipo de salsa de la pizza.
+     *
+     * @param tipoSalsa indicar el tipo de salsa.
+     * @return el tipo de salsa.
+     */
+    public BuilderPizzas setTipoSalsa(TipoSalsa tipoSalsa) {
+        _pizza.setTipoSalsa(tipoSalsa);
+        return this;
+    }
+
+    /**
      * Método para personalizar el ingrediente cebolla de la pizza.
      *
      * @param cebolla indicar si lleva(true) o no(false) cebolla.
@@ -77,6 +99,50 @@ public class BuilderPizzas {
      */
     public BuilderPizzas setSinGluten(boolean sinGluten) {
         _pizza.setSinGluten(sinGluten);
+        return this;
+    }
+
+    /**
+     * Método para personalizar el extra de queso de la pizza.
+     *
+     * @param extraQueso indicar si tiene(true) o no(false) extra de queso.
+     * @return si tiene extra de queso(true) o no(false).
+     */
+    public BuilderPizzas setExtraQueso(boolean extraQueso) {
+        _pizza.setExtraQueso(extraQueso);
+        return this;
+    }
+
+    /**
+     * Método para presonalizar el ingrediente piña de la pizza.
+     *
+     * @param pineapple indicar si lleva(true) o no(false) piña.
+     * @return si tiene lleva piña(true) o no(false).
+     */
+    public BuilderPizzas setPineapple(boolean pineapple) {
+        _pizza.setPineapple(pineapple);
+        return this;
+    }
+
+    /**
+     * Método para presonalizar el ingrediente champiñones de la pizza.
+     *
+     * @param mushrooms indicar si lleva(true) o no(false) champiñones.
+     * @return si tiene lleva champiñones(true) o no(false).
+     */
+    public BuilderPizzas setMushrooms(boolean mushrooms) {
+        _pizza.setMushrooms(mushrooms);
+        return this;
+    }
+
+    /**
+     * Método para presonalizar el ingrediente jamón de la pizza.
+     *
+     * @param jamon indicar si lleva(true) o no(false) jamón.
+     * @return si tiene lleva jamón(true) o no(false).
+     */
+    public BuilderPizzas setJamon(boolean jamon) {
+        _pizza.setJamon(jamon);
         return this;
     }
 

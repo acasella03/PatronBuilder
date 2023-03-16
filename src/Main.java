@@ -9,7 +9,7 @@ public class Main {
         miBuilder.setCebolla(false);
         miBuilder.setRelleno(false);
         miBuilder.setSize(Size.MEDIUM);
-        miBuilder.setTipoMasa(TipoMasa.PAN);
+        miBuilder.setTipoMasa(TipoMasa.NORMAL);
         pizzaAmedida = miBuilder.build();
         System.out.println(pizzaAmedida.toString());
 
