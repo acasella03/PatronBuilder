@@ -2,8 +2,9 @@
 classDiagram
     App "1" *-- "1..*" BuilderPizzas : association
     class App{
-        +pizzaAmedida: Pizzas
-        +pizzaDefault: Pizzas
+        +pizzaBasica: Pizzas
+        +pizzaBasicaExtraQueso: Pizzas
+        +pizzaParaCeliacos: Pizzas
         +main(String[] args)
     }
     class BuilderPizzas{
