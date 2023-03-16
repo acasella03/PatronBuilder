@@ -21,5 +21,10 @@ public class Main {
         Pizzas pizzaDefault2 = new BuilderPizzas().setCebolla(true).setSize(Size.BIG).setRecogida(TipoRecogida.PARA_LLEVAR).build();
         System.out.println(pizzaDefault2.toString());
 
+        Pizzas pizzaAmedida2=new BuilderPizzas().setSize(Size.SMALL).setRelleno(false).setSalsa(false).setTipoMasa(TipoMasa.NORMAL).setExtraQueso(true).build();
+        System.out.println(pizzaAmedida2.toString());
+
+        Pizzas pizzaAmedida3=new BuilderPizzas().setSize(Size.BIG).setSalsa(true).setTipoSalsa(TipoSalsa.BARBACOA).setTipoMasa(TipoMasa.FINA).setRelleno(true).setCebolla(true).setExtraQueso(true).setMushrooms(true).setRecogida(TipoRecogida.PARA_LLEVAR).build();
+        System.out.println(pizzaAmedida3.toString());
     }
 }
