@@ -114,8 +114,6 @@ Producto producto = builder.nombre("...").precio(0.0).categoria("...").build();
 ```
 Los métodos nombre, precio y categoria son los que reemplazan el método atributo en el diagrama del patrón.
 
-En este ejemplo el Builder es una clase concreta, pero bien podría ser una interface. Esto daría la ventaja de que no necesariamente debemos usar siempre la misma clase Builder, podríamos (a través de un patrón Factory) utilizar diferentes Builders dependiendo de distintas condiciones o situaciones.
-
 Este patrón tiene la ventaja de que podemos extenderlo para guiar la construcción de objetos complejos.
 Pensemos que tenemos una clase Usuario que tiene una Direccion y varios Telefonos asociados, algo similar a esto:
 
@@ -179,4 +177,14 @@ Usuario usuario = Usuario.builder("Programador Java", "javatutoriales")
     .edad(30) 
     .password("123456789")
     .build();
+```
+## Combinación con el Patrón Factory:
+En el ejemplo anterior el Builder es una clase concreta, pero bien podría ser una interface. Esto daría la ventaja de que no necesariamente debemos usar siempre la misma clase Builder, podríamos (a través de un patrón Factory) utilizar diferentes Builders dependiendo de distintas condiciones o situaciones.
+
+Si tomamos el ejemplo Factoría Transporte que ya tenemos totalmente desarrollada: [FactoriaTransporte](https://github.com/acasella03/Transporte)
+
+Podemos crear una Clase BuilderCamión donde recogemos todas las características de la Clase Camión que implementa la interfaz ITransportable y para usarlo en la Clase FactoriaTransporte sería de la siguiente manera:
+```
+case CAMION:
+   return new BuilderCamión().cantidadRuedas(20).toneladasSoportadas(20000).buil();
 ```
